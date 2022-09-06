@@ -1,7 +1,7 @@
 # Bucles [Python]
 # Ejercicios de profundización
 
-# Autor: Inove Coding School
+# Autor: Edwin Yepez
 # Version: 2.0
 
 # NOTA: 
@@ -23,12 +23,24 @@ Al finalizar el bucle, utilice la variable "cantidad_numeros" y la variable
 Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
 sino que va hasta el anterior.
 '''
-
 print('Comenzamos a ponernos serios!')
 # Empezar aquí la resolución del ejercicio
-
-# inicio = ....
+# inicio = ...
 # fin = ....
+inicio = int(input('Ingrese el primer número de la secuencia\n'))
+fin = int(input('Ingrese el último número de la secuencia\n'))
+lista = []
+sumatoria = 0
+for i in range(inicio, fin + 1, 1):
+    lista.append(i)
+print('\nLa lista a analizar es la siguiente: ',lista)
+cantidad_numeros = len(lista)
+print('\nLa longitud de la lista es de: ',cantidad_numeros)
+for i in lista:
+    sumatoria += i
+print('\nLa sumatoria de los elementos de la lista es: ',sumatoria)
+promedio = sumatoria / cantidad_numeros
+print('\nEl promedo de los numeros en la lista es: \n',promedio)
 
 # cantidad_numeros ....
 # sumatoria ....

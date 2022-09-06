@@ -1,7 +1,7 @@
 # Bucles [Python]
 # Ejercicios de profundización
 
-# Autor: Inove Coding School
+# Autor: Edwin Yepez
 # Version: 2.0
 
 # NOTA: 
@@ -48,7 +48,28 @@ cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
 
 # Realice aquí el bucle para recorrer todas las notas
 # y cacular la sumatoria
+for nota in notas:
+    if nota < 0:
+        cantidad_ausentes += 1
+    else:
+        cantidad_notas += 1
+        sumatoria = sumatoria + nota
 
+print('La cantidad de dias ausentes son: ',cantidad_ausentes)
+print('La cantidad de notas es: ',cantidad_notas)
+#print(sumatoria)
+promedio = sumatoria / cantidad_notas
+print('El promedio obtenido es: ',promedio)
+if promedio >= 90:
+    print('El promedio es {} y es equivalente a A '.format(promedio))
+elif promedio >= 80:
+    print('El promedio es {} y es equivalente a B '.format(promedio))
+elif promedio >= 70:
+    print('El promedio es {} y es equivalente a C '.format(promedio))
+elif promedio >= 60:
+    print('El promedio es {} y es equivalente a D '.format(promedio))
+else:
+    print('El promedio es {} y es equivalente a F '.format(promedio))
 # Terminado el bucle calcule el promedio como
 # promedio = sumatoria / cantidad_notas
 

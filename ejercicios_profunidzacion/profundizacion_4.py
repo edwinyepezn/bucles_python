@@ -1,7 +1,7 @@
 # Bucles [Python]
 # Ejercicios de profundización
 
-# Autor: Inove Coding School
+# Autor: Edwin Yepez
 # Version: 2.0
 
 # NOTA: 
@@ -10,8 +10,8 @@
 # de mucho más tiempo para abordar estos temas por su cuenta.
 # Requiere mayor tiempo de dedicación e investigación autodidacta.
 
-temp_dataloger = [12.8, 18.6, 14.5, 20.8, 12.1, 21.2, 13.5, 18.6,
-                  14.7, 19.6, 11.2, 18.4]
+temp_dataloger = [19.8, 21.6, 23, 20.8, 22.1, 21.3, 23.5, 27.6,
+                  22.7, 23.6, 25.2, 26.4]
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
@@ -50,8 +50,27 @@ temperatura_promedio = 0    # Al finalizar el loop deberá aquí alamcenar el pr
 temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
 # Colocar el bucle aqui......
+    # Verifico si el número ingresado es mayor al
+    # máximo número ingresado hasta el momento
+for numero in temp_dataloger:
+    if (temperatura_max is None) or (numero > temperatura_max):
+       temperatura_max = numero
+for numero in temp_dataloger:
+    if (temperatura_min is None) or (numero < temperatura_min):
+       temperatura_min= numero
+print('La temperatura maxima es: ',temperatura_max)
+print('La temperatura minima es: ',temperatura_min)
+for numero in temp_dataloger:
+    temperatura_sumatoria = temperatura_sumatoria + numero
+print('La sumatoria de todas las temperaturas es: ',temperatura_sumatoria)
+temperatura_len = len(temp_dataloger)
+temperatura_promedio = temperatura_sumatoria / temperatura_len
+print('El promedio de las temperaturas es de: ',temperatura_promedio)
+print('La maxima temperatura calculado por python: ',max(temp_dataloger))
+print('La minima temperatura calculado por python: ',min(temp_dataloger))
+print('La sumatoria calculada por Python es: ',sum(temp_dataloger))
 
-# Al finalizar el bucle compare si el valor que usted calculó para
+#Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
 # usando la función "max" y la función "min" de python
 # función "max" --> https://www.w3schools.com/python/ref_func_max.asp
@@ -83,3 +102,11 @@ https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-dur
 # ¿En qué época del año nos encontramos?
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
+if(temperatura_min >= 19) and (temperatura_max <= 28):
+    print('ESTAMOS EN VERANO!!')
+elif(temperatura_min >= 11) and (temperatura_max <= 20):
+    print('ESTAMOS EN OTOÑO!!')
+elif(temperatura_min >= 8) and (temperatura_max <= 14):
+    print('ESTAMOS EN INVIERNO!!')
+elif(temperatura_min >= 10) and (temperatura_max <= 24):
+    print('ESTAMOS EN PRIMAVERA!!')
